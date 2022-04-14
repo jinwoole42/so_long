@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/12 18:06:20 by jinwoole          #+#    #+#              #
-#    Updated: 2022/04/12 18:10:39 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/04/14 16:09:50 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,25 +14,31 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 NAME= so_long
+MLX= libmlx.a
 OPR_DIR	=	
 
-SOURCES =	
+SOURCES = ./main.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
 all: $(NAME)
 
-LIB:
-	make -C ./minilibx
-	cp ./minilibx/libmlx.a
+$(NAME): $(MLX) $(OBJECTS)
+	arch -x86_64 $(CC) $(CFLAGS) -L. -lmlx -framework OpenGl -framework Appkit $(OBJECTS) -o so_long
 
-$(NAME): LIB $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) libmlx.a -o push_swap
+$(MLX):
+	make -C ./mlx
+	cp ./mlx/libmlx.a .
 
 clean:
 	$(RM) $(OBJECTS) $(BONUS_OBJ)
+	make clean -C ./mlx
 ## 라이브러리도 지워야
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) $(MLX)
+	$(RM) ./mlx/libmlx.a
 
 re: fclean all
+
+.PHONY: all clean fclean re
