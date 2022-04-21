@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/12 18:06:20 by jinwoole          #+#    #+#              #
-#    Updated: 2022/04/14 16:09:50 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/04/21 13:39:16 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(MLX):
 clean:
 	$(RM) $(OBJECTS) $(BONUS_OBJ)
 	make clean -C ./mlx
-## 라이브러리도 지워야
+
 fclean: clean
 	$(RM) $(NAME)
 	$(RM) $(MLX)
