@@ -6,13 +6,13 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/04/14 16:20:44 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/04/26 11:33:20 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-#include "mlx.h"
+#include "./mlx/mlx.h"
 
 #endif
