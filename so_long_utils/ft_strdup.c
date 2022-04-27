@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/07 18:58:31 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/04/26 11:38:55 by jinwoole         ###   ########.fr       */
+/*   Created: 2021/12/05 11:48:27 by jinwoole          #+#    #+#             */
+/*   Updated: 2022/04/27 16:34:48 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "../so_long"
 
-# include <stdlib.h>
-# include <unistd.h>
+char	*ft_strdup(const char *s1)
+{
+	int		s1_len;
+	int		i;
+	char	*ptr;
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1000
-# endif
-
-char	*get_next_line(int fd);
-char	*read_to_backup(int fd, char *backup_str);
-char	*get_line(char *backup_str);
-char	*new_backup_str(char *backup_str);
-char	*ft_strchr(char *s, int c);
-
-#endif
+	s1_len = ft_strlen(s1);
+	ptr = (char *)malloc(sizeof(char) * (s1_len + 1));
+	if (ptr == 0)
+		return (0);
+	i = 0;
+	while (i < s1_len)
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
+}

@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/07 18:58:31 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/04/26 11:38:55 by jinwoole         ###   ########.fr       */
+/*   Created: 2021/12/01 17:06:56 by jinwoole          #+#    #+#             */
+/*   Updated: 2022/04/27 16:34:50 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "../so_long"
 
-# include <stdlib.h>
-# include <unistd.h>
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1000
-# endif
-
-char	*get_next_line(int fd);
-char	*read_to_backup(int fd, char *backup_str);
-char	*get_line(char *backup_str);
-char	*new_backup_str(char *backup_str);
-char	*ft_strchr(char *s, int c);
-
-#endif
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
