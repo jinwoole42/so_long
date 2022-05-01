@@ -6,11 +6,23 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 18:58:36 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/04/27 16:42:11 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/01 21:55:00 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+size_t	ft_strlen(char *s)
+{
+	size_t	i;
+
+	i = 0;
+	if (s == 0)
+		return (0);
+	while (s[i])
+		i++;
+	return (i);
+}
 
 char	*ft_strchr(char *s, int c)
 {
@@ -28,6 +40,33 @@ char	*ft_strchr(char *s, int c)
 		i++;
 	}
 	return (0);
+}
+
+char	*ft_strjoin(char *s1, char *s2)
+{
+	char	*str;
+	int		i;
+	int		j;
+	int		s1_len;
+	int		s2_len;
+
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	str = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
+	if (str == 0)
+		return (0);
+	i = 0;
+	j = 0;
+	while (i < s1_len)
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	while (j < s2_len)
+		str[i++] = s2[j++];
+	str[i] = '\0';
+	free(s1);
+	return (str);
 }
 
 char	*get_line(char *backup_str)

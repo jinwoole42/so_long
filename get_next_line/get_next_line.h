@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 18:58:31 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/04/26 11:38:55 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/01/17 19:17:00 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ char	*read_to_backup(int fd, char *backup_str);
 char	*get_line(char *backup_str);
 char	*new_backup_str(char *backup_str);
 char	*ft_strchr(char *s, int c);
+char	*ft_strjoin(char *s1, char *s2);
+size_t	ft_strlen(char *s);
 
 #endif

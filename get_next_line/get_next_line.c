@@ -6,11 +6,13 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 18:58:33 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/04/26 11:38:51 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/01 21:54:51 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+//#include <stdio.h>
+//#include <fcntl.h>
 
 char	*read_to_backup(int fd, char *backup_str)
 {
