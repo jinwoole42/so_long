@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/03 16:55:20 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/03 18:11:53 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 #include "./mlx/mlx.h"
 #include <fcntl.h>
-#include "unistd.h"
+#include <unistd.h>
+#include <stdlib.h>
 #include "./get_next_line/get_next_line.h"
+#include <stdio.h>
 
 typedef struct	s_map {
 	int		height;
@@ -25,5 +27,7 @@ typedef struct	s_map {
 }				t_map;
 
 void	map_info(char *path, t_map *map);
+void	exit_error(char *str);
+void	check_error(int argc, char **argv);
 
 #endif

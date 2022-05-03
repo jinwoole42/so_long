@@ -6,15 +6,14 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:03:42 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/03 16:53:41 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/03 18:04:06 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 #include <stdio.h>
-#include <unistd.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
 	void	*mlx;
 	void	*mlx_win;
@@ -25,13 +24,11 @@ int	main(void)
 	int		img_height;
 	t_map	*map;
 
-/*	if (argc != 2)
-		exit(0);*/
+	check_error(argc, argv);
+
 	map = malloc(sizeof(t_map));
 	map_path = "map.ber";
 	map_info(map_path, map);
-
-
 
 	mlx = mlx_init();
 	mlx_win = NULL;
