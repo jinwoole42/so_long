@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/12 18:06:20 by jinwoole          #+#    #+#              #
-#    Updated: 2022/05/01 18:01:22 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/05/03 16:54:12 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ NAME= so_long
 MLX= libmlx.a
 
 SOURCES =	main.c \
+			read_map.c \
 			get_next_line/get_next_line.c \
 			get_next_line/get_next_line_utils.c \
 

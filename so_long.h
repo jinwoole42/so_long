@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/01 19:58:01 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/03 16:55:20 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ typedef struct	s_map {
 	int		width;
 	char	**data;
 }				t_map;
+
+void	map_info(char *path, t_map *map);
 
 #endif
