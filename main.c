@@ -6,12 +6,11 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:03:42 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/03 18:04:06 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/03 18:17:04 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
