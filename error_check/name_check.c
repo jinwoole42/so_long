@@ -1,42 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_check.c                                      :+:      :+:    :+:   */
+/*   name_check.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 17:23:40 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/03 18:15:07 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/10 14:41:48 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
-
-static char	*ft_strstr(const char *haystack, const char *needle)
-{
-	size_t			i;
-	size_t			j;
-	unsigned char	*hay;
-	unsigned char	*ndl;
-
-	i = 0;
-	hay = (unsigned char *)haystack;
-	ndl = (unsigned char *)needle;
-	if (needle[0] == '\0')
-		return ((char *)hay);
-	while (hay[i])
-	{
-		j = 0;
-		while (hay[i + j] == ndl[j])
-		{
-			j++;
-			if (ndl[j] == '\0')
-				return ((char *)&hay[i]);
-		}
-		i++;
-	}
-	return (0);
-}
 
 void	exit_error(char *str)
 {
@@ -44,10 +18,28 @@ void	exit_error(char *str)
 	exit(1);
 }
 
-void	check_error(int argc, char **argv)
+void	your_name(char **argv)
+{
+	int	i;
+
+	i = 0;
+	while (argv[1][i])
+		i++;
+	if (i < 5)
+		exit_error("where is g** d*** .ber?");
+	if (argv[1][i - 4] != '.')
+		exit_error("where is g** d*** .ber?");
+	if (argv[1][i - 3] != 'b')
+		exit_error("where is g** d*** .ber?");
+	if (argv[1][i - 2] != 'e')
+		exit_error("where is g** d*** .ber?");
+	if (argv[1][i - 1] != 'r')
+		exit_error("where is g** d*** .ber?");
+}
+
+void	name_error(int argc, char **argv)
 {
 	if (argc != 2)
 		exit_error("only one argument is OK");
-	if (!(ft_strstr(argv[1], ".ber")))
-		exit_error("Is that even a map file?");
+	your_name(argv);
 }

@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/03 18:11:53 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/10 15:10:39 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct	s_map {
 
 void	map_info(char *path, t_map *map);
 void	exit_error(char *str);
-void	check_error(int argc, char **argv);
+void	name_error(int argc, char **argv);
+void	shape_check(char *path);
 
 #endif
