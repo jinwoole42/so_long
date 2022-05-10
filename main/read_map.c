@@ -6,11 +6,11 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:52:00 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/10 16:25:20 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/10 20:00:30 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 static void	map_size(char *path, t_map *map)
 {
