@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:03:42 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/10 15:02:00 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:36:57 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,19 @@ int	main(int argc, char **argv)
 	shape_check(map_path);
 	map = malloc(sizeof(t_map));
 	map_info(map_path, map);
+
+	int i;
+
+	i = 0;
+	printf("%d\n", map->width);
+	printf("%d\n", map->height);
+	while (i < map->height)
+	{
+		printf("%s\n", map->data[i]);
+		i++;
+	}
+
+	data_check(map);
 
 	
 	mlx = mlx_init();

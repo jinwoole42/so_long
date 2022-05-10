@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:52:00 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/03 16:54:41 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:25:20 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,13 @@ void	map_info(char *path, t_map *map)
 	fd = open(path, O_RDONLY);
 	map_size(path, map);
 	height = 0;
-	map->data = (char **)malloc(sizeof(char *) * map->height);
+	map->data = (char **)malloc(sizeof(char *) * map->height + 1);
 	while (height < map->height)
 	{
 		map->data[height] = (char *)malloc((map->width + 1) * sizeof(char));
 		line = get_next_line(fd);
 		i = 0;
-		while (10 > i)
+		while (map->width > i)
 		{
 			map->data[height][i] = line[i];
 			i++;
@@ -56,5 +56,6 @@ void	map_info(char *path, t_map *map)
 		height += 1;
 		free(line);
 	}
+	map->data[height] = 0;
 	close(fd);
 }

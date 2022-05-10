@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:42:50 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/10 15:21:08 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/10 15:46:39 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	shape_check(char *path)
 		if (length != 0 && (int)ft_strlen(line) != length)
 			exit_error("Map data is not rectangle");
 		length = ft_strlen(line);
-		printf("%d\n", (int)ft_strlen(line));
 		height++;
 		free(line);
 		line = get_next_line(fd);

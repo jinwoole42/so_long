@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/12 18:06:20 by jinwoole          #+#    #+#              #
-#    Updated: 2022/05/10 14:55:37 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/05/10 15:37:34 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SOURCES =	main.c \
 			read_map.c \
 			error_check/name_check.c \
 			error_check/shape_check.c \
+			error_check/data_check.c \
 			get_next_line/get_next_line.c \
 			get_next_line/get_next_line_utils.c \
 
