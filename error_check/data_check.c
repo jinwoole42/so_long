@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:31:17 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/10 17:08:06 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:25:10 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,5 @@ void	data_check(t_map *map)
 	the_wall(map);
 	guard_of_the_wall(map);
 	evil_things(map);
+	essential_check(map);
 }
