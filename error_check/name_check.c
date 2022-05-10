@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 17:23:40 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/10 14:41:48 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:33:54 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	exit_error(char *str)
 	exit(1);
 }
 
-void	your_name(char **argv)
+static void	your_name(char **argv)
 {
 	int	i;
 
