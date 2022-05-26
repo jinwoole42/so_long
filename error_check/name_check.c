@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 17:23:40 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/10 17:33:54 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/26 15:58:11 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ static void	your_name(char **argv)
 void	name_error(int argc, char **argv)
 {
 	if (argc != 2)
-		exit_error("only one argument is OK");
+		exit_error("Insert one map!!!");
 	your_name(argv);
 }

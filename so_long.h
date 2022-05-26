@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/10 17:24:57 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/26 16:15:13 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 #include <stdio.h>
 
 typedef struct	s_map {
+	void	*mlx;
+	void	*mlx_win;
 	int		height;
 	int		width;
 	char	**data;
