@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:03:42 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/26 16:45:10 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/26 17:03:56 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,33 +26,33 @@ static void	map_read_check(int argc, char **argv, t_map *map)
 void	render(t_map *map)
 {
 	void	*img;
-	int		x;
-	int		y;
+	int		i;
+	int		j;
 	int		img_w;
 	int		img_h;
 
-	x = 0;
-	y = 0;
+	i = 0;
+	j = 0;
 	img = malloc(sizeof(void *));
-	while (x < map->height)
+	while (i < map->height)
 	{
-		while(y < map->width)
+		while(j < map->width)
 		{
-			if (map->data[x][y] == '0')
+			if (map->data[i][j] == '0')
 				img = mlx_xpm_file_to_image(map->mlx, "./src/0.xpm" ,&img_w, &img_h);
-			else if (map->data[x][y] == '1')
+			else if (map->data[i][j] == '1')
 				img = mlx_xpm_file_to_image(map->mlx, "./src/1.xpm" ,&img_w, &img_h);
-			else if (map->data[x][y] == 'E')
+			else if (map->data[i][j] == 'E')
 				img = mlx_xpm_file_to_image(map->mlx, "./src/E.xpm" ,&img_w, &img_h);
-			else if (map->data[x][y] == 'P')
+			else if (map->data[i][j] == 'P')
 				img = mlx_xpm_file_to_image(map->mlx, "./src/P.xpm" ,&img_w, &img_h);
-			else if (map->data[x][y] == 'C')
+			else if (map->data[i][j] == 'C')
 				img = mlx_xpm_file_to_image(map->mlx, "./src/C.xpm" ,&img_w, &img_h);
-			mlx_put_image_to_window(map->mlx, map->mlx_win, img, y * 64, x * 64);
-			y++;
+			mlx_put_image_to_window(map->mlx, map->mlx_win, img, j * 64, i * 64);
+			j++;
 		}
-		y = 0;
-		x++;
+		j = 0;
+		i++;
 	}
 }
 
