@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:03:42 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/26 17:03:56 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/26 17:15:05 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,24 @@ void	render(t_map *map)
 	}
 }
 
+int	key_press(int keycode, t_param *param)
+{
+	int a = 0;
+
+	if (keycode == KEY_W)
+		param->y++;
+	else if (keycode == KEY_S)
+		param->y--;
+	else if (keycode == KEY_A)
+		param->x--;
+	else if (keycode == KEY_D)
+		param->x++;
+	else if (keycode == KEY_ESC)
+		exit(0);
+	printf("x: %d, y: %d\n", param->x, param->y);
+	return (0);
+}
+
 int	main(int argc, char **argv)
 {
 	t_map	*map;
@@ -64,7 +82,7 @@ int	main(int argc, char **argv)
 	map_read_check(argc, argv, map);
 	map->mlx = mlx_init();
 	map->mlx_win = mlx_new_window(map->mlx, map->width * 64, map->height * 64, "so_long");
+	mlx_hook(mlx->win, X_EVENT_KEY_RELEASE, 0, &key_press, &)
 	render(map);
-
 	mlx_loop(map->mlx);
 }
