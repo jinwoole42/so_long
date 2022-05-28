@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/12 18:06:20 by jinwoole          #+#    #+#              #
-#    Updated: 2022/05/10 20:00:44 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/05/28 20:57:21 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SOURCES =	main/main.c \
 			error_check/essential_check.c \
 			get_next_line/get_next_line.c \
 			get_next_line/get_next_line_utils.c \
+			game/key.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:52:00 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/10 20:00:30 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/28 21:50:57 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,29 @@ static void	map_size(char *path, t_map *map)
 	}
 	free(line);
 	close(fd);
+}
+
+void	where_is_player(t_map *map)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (map->data[i])
+	{
+		j = 0;
+		while (map->data[i][j])
+		{
+			if (map->data[i][j] == 'E')
+			{
+				map->player_x = i;
+				map->player_y = j;
+				return ;
+			}
+			j++;
+		}
+		i++;
+	}
 }
 
 void	map_info(char *path, t_map *map)
@@ -57,5 +80,6 @@ void	map_info(char *path, t_map *map)
 		free(line);
 	}
 	map->data[height] = 0;
+	where_is_player(map);
 	close(fd);
 }
