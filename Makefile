@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/12 18:06:20 by jinwoole          #+#    #+#              #
-#    Updated: 2022/05/29 18:13:10 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/05/29 19:21:02 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SOURCES =	main/main.c \
 			game/move_lr.c
 
 OBJECTS = $(SOURCES:.c=.o)
-ㅊㅇ
+
 all: $(NAME)
 
 $(NAME): $(MLX) $(OBJECTS)
