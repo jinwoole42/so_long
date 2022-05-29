@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 17:23:40 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/26 15:58:11 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:31:11 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ static void	your_name(char **argv)
 	while (argv[1][i])
 		i++;
 	if (i < 5)
-		exit_error("where is g** d*** .ber?");
+		exit_error("where is .ber? Seriously?");
 	if (argv[1][i - 4] != '.')
-		exit_error("where is g** d*** .ber?");
+		exit_error("where is .ber? Seriously?");
 	if (argv[1][i - 3] != 'b')
-		exit_error("where is g** d*** .ber?");
+		exit_error("where is .ber? Seriously?");
 	if (argv[1][i - 2] != 'e')
-		exit_error("where is g** d*** .ber?");
+		exit_error("where is .ber? Seriously?");
 	if (argv[1][i - 1] != 'r')
-		exit_error("where is g** d*** .ber?");
+		exit_error("where is .ber? Seriously?");
 }
 
 void	name_error(int argc, char **argv)

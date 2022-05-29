@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 16:15:31 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:23:03 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ void	render(t_map *map);
 int		close_map(t_map *map);
 void	move_w(t_map *map);
 void	move_s(t_map *map);
+void	move_a(t_map *map);
+void	move_d(t_map *map);
 
 #endif

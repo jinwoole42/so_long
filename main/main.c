@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:03:42 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 16:05:19 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:33:24 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	map_read_check(int argc, char **argv, t_map *map)
 	map_info(map_path, map);
 	data_check(map);
 	map->move = 0;
-	map->collect = 0;
 	map->player_c = 0;
 }
 

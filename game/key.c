@@ -6,30 +6,11 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 20:51:35 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 16:15:18 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:22:49 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
-
-
-void	move_a(t_map *map)
-{
-//	int	i;
-
-//	i = 0;
-	printf("%d\n", map->player_x);
-	printf("%d\n", map->player_y);
-}
-
-void	move_d(t_map *map)
-{
-//	int	i;
-
-//	i = 0;
-	printf("%d\n", map->player_x);
-	printf("%d\n", map->player_y);
-}
 
 int	press_key(int key_code, t_map *map)
 {

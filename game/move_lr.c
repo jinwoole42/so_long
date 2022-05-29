@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move_up_down.c                                     :+:      :+:    :+:   */
+/*   move_lr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:10:49 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 16:41:13 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:37:09 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-static void move_protocol1(t_map *map, int from_x, int to_x, int y)
+static void move_protocol2(t_map *map, int x, int to_y, int y)
 {
-	if (map->data[to_x][y] == '0')
+	if (map->data[x][to_y] == '0')
 	{
-		map->data[from_x][y] = '0';
-		map->data[to_x][y] = 'P';
-		map->player_x = to_x;
+		map->data[x][y] = '0';
+		map->data[x][to_y] = 'P';
+		map->player_y = to_y;
 		map->move += 1;
 	}
-	else if (map->data[to_x][y] == 'C')
+	else if (map->data[x][to_y] == 'C')
 	{
-		map->data[from_x][y] = '0';
-		map->data[to_x][y] = 'P';
-		map->player_x = to_x;
+		map->data[x][y] = '0';
+		map->data[x][to_y] = 'P';
+		map->player_y = to_y;
 		map->player_c += 1;
-		printf("You eat : %d/%d\n", map->player_c, map->collect);
+		printf("You eat : %d/%d.\n", map->player_c, map->collect);
 		map->move += 1;
 	}
-	else if (map->data[to_x][y] == 'E')
+	else if (map->data[x][to_y] == 'E')
 	{
 		if (map->player_c == map->collect)
 			close_map(map);
@@ -38,26 +38,26 @@ static void move_protocol1(t_map *map, int from_x, int to_x, int y)
 	render(map);
 }
 
-void	move_w(t_map *map)
+void	move_a(t_map *map)
 {
 	int x;
-	int	to_x;
+	int	to_y;
 	int y;
 
 	x = map->player_x;
-	to_x = x - 1;
 	y = map->player_y;
-	move_protocol1(map, x, to_x, y);
+	to_y = y - 1;
+	move_protocol2(map, x, to_y, y);
 }
 
-void	move_s(t_map *map)
+void	move_d(t_map *map)
 {
 	int x;
-	int	to_x;
+	int	to_y;
 	int y;
 
 	x = map->player_x;
-	to_x = x + 1;
 	y = map->player_y;
-	move_protocol1(map, x, to_x, y);
+	to_y = y + 1;
+	move_protocol2(map, x, to_y, y);
 }

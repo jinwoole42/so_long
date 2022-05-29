@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:31:17 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/28 21:44:37 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:31:25 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,8 @@ static void	evil_things(t_map *map)
 				{
 					if (map->data[i][j] != 'P')
 					{
-						exit_error("In the name of iMac, go away Satan!");
 						free(map);
+						exit_error("In the name of iMac, go away Satan!");
 					}
 				}
 			}
