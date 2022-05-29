@@ -31,7 +31,7 @@ SOURCES =	main/main.c \
 			game/move_lr.c
 
 OBJECTS = $(SOURCES:.c=.o)
-
+ㅊㅇ
 all: $(NAME)
 
 $(NAME): $(MLX) $(OBJECTS)
