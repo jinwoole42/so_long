@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:52:00 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 16:33:41 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 18:35:21 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,5 @@ void	map_info(char *path, t_map *map)
 		free(line);
 	}
 	map->data[height] = 0;
-	where_is_player(map);
-	how_many_c(map);
 	close(fd);
 }

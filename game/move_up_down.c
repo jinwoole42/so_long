@@ -6,13 +6,13 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:10:49 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 16:41:13 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 18:18:38 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-static void move_protocol1(t_map *map, int from_x, int to_x, int y)
+static void	move_protocol1(t_map *map, int from_x, int to_x, int y)
 {
 	if (map->data[to_x][y] == '0')
 	{
@@ -27,7 +27,6 @@ static void move_protocol1(t_map *map, int from_x, int to_x, int y)
 		map->data[to_x][y] = 'P';
 		map->player_x = to_x;
 		map->player_c += 1;
-		printf("You eat : %d/%d\n", map->player_c, map->collect);
 		map->move += 1;
 	}
 	else if (map->data[to_x][y] == 'E')
@@ -40,9 +39,9 @@ static void move_protocol1(t_map *map, int from_x, int to_x, int y)
 
 void	move_w(t_map *map)
 {
-	int x;
+	int	x;
 	int	to_x;
-	int y;
+	int	y;
 
 	x = map->player_x;
 	to_x = x - 1;
@@ -52,9 +51,9 @@ void	move_w(t_map *map)
 
 void	move_s(t_map *map)
 {
-	int x;
+	int	x;
 	int	to_x;
-	int y;
+	int	y;
 
 	x = map->player_x;
 	to_x = x + 1;

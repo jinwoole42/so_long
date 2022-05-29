@@ -6,22 +6,29 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 16:23:03 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 18:34:50 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-#include "./mlx/mlx.h"
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "./get_next_line/get_next_line.h"
-#include <stdio.h>
-#include "so_long_key.h"
+# include "./mlx/mlx.h"
+# include <fcntl.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include "./get_next_line/get_next_line.h"
+# include <stdio.h>
 
-typedef struct	s_map {
+# define X_EVENT_KEY_PRESS	2
+# define X_EVENT_KEY_EXIT	17
+# define KEY_ESC			53
+# define KEY_W				13
+# define KEY_A				0
+# define KEY_S				1
+# define KEY_D				2
+
+typedef struct s_map {
 	void	*mlx;
 	void	*mlx_win;
 	int		height;
@@ -35,19 +42,21 @@ typedef struct	s_map {
 }				t_map;
 
 void	map_info(char *path, t_map *map);
-void	exit_error(char *str);
-void	name_error(int argc, char **argv);
-void	shape_check(char *path);
+void	exit_error(char *str, t_map *map);
+void	name_error(int argc, char **argv, t_map *map);
+void	shape_check(char *path, t_map *map);
 void	data_check(t_map *map);
 void	essential_check(t_map *map);
 int		exit_game(t_map *map);
 int		press_key(int key, t_map *map);
-void	where_is_player(t_map *map);
 void	render(t_map *map);
 int		close_map(t_map *map);
 void	move_w(t_map *map);
 void	move_s(t_map *map);
 void	move_a(t_map *map);
 void	move_d(t_map *map);
+void	num_render(t_map *map, int img_w, int img_h);
+void	where_is_player(t_map *map);
+void	how_many_c(t_map *map);
 
 #endif

@@ -6,19 +6,20 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 17:23:40 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 16:31:11 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 18:03:30 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	exit_error(char *str)
+void	exit_error(char *str, t_map *map)
 {
+	free(map);
 	printf("Error : %s\n", str);
 	exit(1);
 }
 
-static void	your_name(char **argv)
+static void	your_name(char **argv, t_map *map)
 {
 	int	i;
 
@@ -26,20 +27,20 @@ static void	your_name(char **argv)
 	while (argv[1][i])
 		i++;
 	if (i < 5)
-		exit_error("where is .ber? Seriously?");
+		exit_error("where is .ber? Seriously?", map);
 	if (argv[1][i - 4] != '.')
-		exit_error("where is .ber? Seriously?");
+		exit_error("where is .ber? Seriously?", map);
 	if (argv[1][i - 3] != 'b')
-		exit_error("where is .ber? Seriously?");
+		exit_error("where is .ber? Seriously?", map);
 	if (argv[1][i - 2] != 'e')
-		exit_error("where is .ber? Seriously?");
+		exit_error("where is .ber? Seriously?", map);
 	if (argv[1][i - 1] != 'r')
-		exit_error("where is .ber? Seriously?");
+		exit_error("where is .ber? Seriously?", map);
 }
 
-void	name_error(int argc, char **argv)
+void	name_error(int argc, char **argv, t_map *map)
 {
 	if (argc != 2)
-		exit_error("Insert one map!!!");
-	your_name(argv);
+		exit_error("Insert one map!!!", map);
+	your_name(argv, map);
 }
