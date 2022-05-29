@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:52:00 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/28 21:50:57 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 14:03:55 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	where_is_player(t_map *map)
 		j = 0;
 		while (map->data[i][j])
 		{
-			if (map->data[i][j] == 'E')
+			if (map->data[i][j] == 'P')
 			{
 				map->player_x = i;
 				map->player_y = j;

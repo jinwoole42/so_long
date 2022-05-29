@@ -6,34 +6,14 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 20:51:35 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/28 21:52:55 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:15:18 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	move_w(t_map *map)
-{
-	int	i;
-
-	i = 0;
-	while (i < 5)
-	{
-		printf("%s\n", map->data[1]);
-		i++;
-	}
-}
 
 void	move_a(t_map *map)
-{
-//	int	i;
-
-//	i = 0;
-	printf("%d\n", map->player_x);
-	printf("%d\n", map->player_y);
-}
-
-void	move_s(t_map *map)
 {
 //	int	i;
 

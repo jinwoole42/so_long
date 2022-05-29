@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/28 21:46:50 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:15:31 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,11 @@ typedef struct	s_map {
 	void	*mlx_win;
 	int		height;
 	int		width;
+	int		collect;
 	int		player_x;
 	int		player_y;
+	int		player_c;
+	int		move;
 	char	**data;
 }				t_map;
 
@@ -40,5 +43,9 @@ void	essential_check(t_map *map);
 int		exit_game(t_map *map);
 int		press_key(int key, t_map *map);
 void	where_is_player(t_map *map);
+void	render(t_map *map);
+int		close_map(t_map *map);
+void	move_w(t_map *map);
+void	move_s(t_map *map);
 
 #endif
