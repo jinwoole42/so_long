@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 18:34:50 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/30 14:50:50 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "./mlx/mlx.h"
 # include <fcntl.h>
-# include <unistd.h>
 # include <stdlib.h>
 # include "./get_next_line/get_next_line.h"
 # include <stdio.h>
