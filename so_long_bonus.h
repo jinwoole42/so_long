@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/31 17:05:15 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/31 17:11:08 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	move_w(t_map *map);
 void	move_s(t_map *map);
 void	move_a(t_map *map);
 void	move_d(t_map *map);
+void	num_render(t_map *map, int img_w, int img_h);
 void	where_is_player(t_map *map);
 void	how_many_c(t_map *map);
 

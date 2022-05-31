@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 20:51:35 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/31 13:29:38 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/31 17:07:29 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 int	press_key(int key_code, t_map *map)
 {
 	if (key_code == KEY_ESC)
-	{	
+	{
+		free(map->data);
 		free(map);
 		exit(0);
 	}

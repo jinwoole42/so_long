@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move_up_down copy.c                                :+:      :+:    :+:   */
+/*   move_up_down_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:10:49 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/31 17:08:44 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/31 17:14:03 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../so_long_bonus.h"
 
 static void	move_protocol1(t_map *map, int from_x, int to_x, int y)
 {
@@ -20,7 +20,6 @@ static void	move_protocol1(t_map *map, int from_x, int to_x, int y)
 		map->data[to_x][y] = 'P';
 		map->player_x = to_x;
 		map->move += 1;
-		printf("%d\n", map->move);
 	}
 	else if (map->data[to_x][y] == 'C')
 	{
@@ -29,7 +28,6 @@ static void	move_protocol1(t_map *map, int from_x, int to_x, int y)
 		map->player_x = to_x;
 		map->player_c += 1;
 		map->move += 1;
-		printf("%d\n", map->move);
 	}
 	else if (map->data[to_x][y] == 'E')
 	{

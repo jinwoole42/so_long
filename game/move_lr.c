@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move_lr.c                                          :+:      :+:    :+:   */
+/*   move_lr_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:10:49 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 18:18:29 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/31 17:08:23 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static void	move_protocol2(t_map *map, int x, int to_y, int y)
 		map->data[x][to_y] = 'P';
 		map->player_y = to_y;
 		map->move += 1;
+		printf("%d\n", map->move);
 	}
 	else if (map->data[x][to_y] == 'C')
 	{
@@ -28,6 +29,7 @@ static void	move_protocol2(t_map *map, int x, int to_y, int y)
 		map->player_y = to_y;
 		map->player_c += 1;
 		map->move += 1;
+		printf("%d\n", map->move);
 	}
 	else if (map->data[x][to_y] == 'E')
 	{

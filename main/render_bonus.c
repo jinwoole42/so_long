@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render.c                                           :+:      :+:    :+:   */
+/*   render_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 15:50:38 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/31 17:14:37 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/31 17:14:33 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../so_long_bonus.h"
 
 static char	*file_selector(t_map *map, int i, int j)
 {
@@ -59,4 +59,5 @@ void	render(t_map *map)
 	img_w = 0;
 	img_h = 0;
 	real_render(map, i, img_w, img_h);
+	num_render(map, img_w, img_h);
 }

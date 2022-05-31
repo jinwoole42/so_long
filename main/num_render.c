@@ -6,11 +6,11 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 17:02:02 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 18:31:08 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/31 17:14:24 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../so_long_bonus.h"
 
 char	*num_file(char number)
 {
