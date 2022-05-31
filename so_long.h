@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/30 14:50:50 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/31 13:31:25 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 # include "./get_next_line/get_next_line.h"
 # include <stdio.h>
 
-# define X_EVENT_KEY_PRESS	2
-# define X_EVENT_KEY_EXIT	17
-# define KEY_ESC			53
-# define KEY_W				13
-# define KEY_A				0
-# define KEY_S				1
-# define KEY_D				2
+# define KEY_PRESS	2
+# define KEY_EXIT	17
+# define KEY_ESC	53
+# define KEY_W		13
+# define KEY_A		0
+# define KEY_S		1
+# define KEY_D		2
 
 typedef struct s_map {
 	void	*mlx;

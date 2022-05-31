@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:14:57 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 18:03:28 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/31 13:26:02 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,17 +86,14 @@ void	essential_check(t_map *map)
 	}
 	if (is_there_c(map) == 0)
 	{
-		free(map);
 		exit_error("No item? Are you kidding?", map);
 	}
 	if (is_there_p(map) == 0)
 	{
-		free(map);
 		exit_error("No player? Don't you want to exist?", map);
 	}
 	if (is_there_p(map) > 1)
 	{
-		free(map);
 		exit_error("More than 1 player? Are you kidding?", map);
 	}
 }

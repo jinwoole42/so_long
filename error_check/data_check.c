@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:31:17 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/05/29 18:03:26 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/05/31 13:27:37 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ static void	guard_of_the_wall(t_map *map)
 	{
 		if (map->data[i][0] != '1' || map->data[i][map->width - 1] != '1')
 		{
+			free(map->data);
 			exit_error("the wall has to be well protected", map);
 		}
 		i++;
@@ -43,6 +44,7 @@ static void	the_wall(t_map *map)
 			{
 				if (map->data[i][r] != '1')
 				{
+					free(map->data);
 					exit_error("the wall has to be protected", map);
 				}
 				r++;
@@ -69,6 +71,7 @@ static void	evil_things(t_map *map)
 				{
 					if (map->data[i][j] != 'P')
 					{
+						free(map->data);
 						exit_error("In the name of iMac, go away Satan!", map);
 					}
 				}
